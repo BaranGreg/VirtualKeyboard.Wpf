@@ -16,7 +16,7 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <ContentControl MaxWidth="700" MaxHeight="150" x:Name="KeyboardValueContent"/>
+            <ContentControl MaxWidth="1200" MaxHeight="150" x:Name="KeyboardValueContent"/>
         </Grid>
         <Grid Grid.Row="1">
             <ContentControl MaxWidth="900" MaxHeight="360" x:Name="KeyboardContent"/>

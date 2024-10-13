@@ -18,6 +18,39 @@
         <Setter Property="Width" Value="Auto" />
     </Style>
 
+    <Style x:Key="KeyboardButtonStyleRed" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="#ED6329"/>
+        <Setter Property="Foreground" Value="{StaticResource KeyboardForegroundBrush}"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="Width" Value="Auto" />
+    </Style>
+
+    <Style x:Key="KeyboardButtonStyleYellow" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="#E4BE39"/>
+        <Setter Property="Foreground" Value="{StaticResource KeyboardForegroundBrush}"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="Width" Value="Auto" />
+    </Style>
+
+    <Style x:Key="KeyboardButtonStyleGreen" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="#91E1D8"/>
+        <Setter Property="Foreground" Value="{StaticResource KeyboardForegroundBrush}"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="Width" Value="Auto" />
+    </Style>
+
     <Style x:Key="KeyboardRepeatButtonStyle" TargetType="{x:Type RepeatButton}" BasedOn="{StaticResource {x:Type RepeatButton}}">
         <Setter Property="FontSize" Value="30"/>
         <Setter Property="BorderThickness" Value="0"/>
@@ -30,10 +63,14 @@
     </Style>
 
     <Style x:Key="KeyboardValueBoxStyle" TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
-        <Setter Property="FontSize" Value="40" />
+        <Setter Property="FontSize" Value="60" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Foreground" Value="{StaticResource KeyboardForegroundBrush}"/>
         <Setter Property="Background" Value="{StaticResource KeyboardBackgroundBrush}"/>
-        <Setter Property="Margin" Value="25" />
+        <Setter Property="FontFamily" Value="/Fonts/#Montserrat"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="MinWidth" Value="1200"/>
+        <Setter Property="MaxWidth" Value="1200"/>
+        <Setter Property="Margin" Value="15" />
     </Style>
 </ResourceDictionary>

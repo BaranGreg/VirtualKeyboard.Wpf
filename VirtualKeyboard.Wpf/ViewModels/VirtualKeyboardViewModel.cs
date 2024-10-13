@@ -76,7 +76,7 @@ namespace VirtualKeyboard.Wpf.ViewModels
             AddCharacter = new Command(a =>
             {
                 if (a is string character)
-                    if (character.Length == 1)
+                    if (character.Length == 1 && KeyboardText.Length <= 25)
                     {
                         if (Uppercase) character = character.ToUpper();
                         if (!string.IsNullOrEmpty(SelectedValue))
