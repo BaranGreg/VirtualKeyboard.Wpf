@@ -69,7 +69,7 @@ namespace VirtualKeyboard.Wpf.ViewModels
         public VirtualKeyboardViewModel(string initialValue)
         {
             _keyboardText = initialValue;
-            _keyboardType = KeyboardType.Alphabet;
+            _keyboardType = KeyboardType.Number;
             _uppercase = false;
             CaretPosition = _keyboardText.Length;
 
@@ -113,8 +113,18 @@ namespace VirtualKeyboard.Wpf.ViewModels
             });
             ChangeKeyboardType = new Command(a =>
             {
-                if (KeyboardType == KeyboardType.Alphabet) KeyboardType = KeyboardType.Special;
-                else KeyboardType = KeyboardType.Alphabet;
+                switch (KeyboardType)
+                {
+                    case KeyboardType.Alphabet:
+                        KeyboardType = KeyboardType.Special;
+                        break;
+                    case KeyboardType.Special:
+                        KeyboardType = KeyboardType.Number;
+                        break;
+                    case KeyboardType.Number:
+                        KeyboardType = KeyboardType.Alphabet;
+                        break;
+                }
             });
             Accept = new Command(a => VKeyboard.Close());
         }

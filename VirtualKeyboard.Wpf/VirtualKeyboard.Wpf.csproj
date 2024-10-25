@@ -65,6 +65,9 @@
     <Compile Include="Views\KeyboardValueView.xaml.cs">
       <DependentUpon>KeyboardValueView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\NumbersView.xaml.cs">
+      <DependentUpon>NumbersView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SpecialCharactersView.xaml.cs">
       <DependentUpon>SpecialCharactersView.xaml</DependentUpon>
     </Compile>
@@ -89,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\KeyboardValueView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NumbersView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

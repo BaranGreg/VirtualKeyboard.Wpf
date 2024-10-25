@@ -30,7 +30,7 @@ namespace VirtualKeyboard.Wpf
             else throw new ArgumentException();
         }
 
-        public static void Listen<T>(Expression<Func<T, string>> property) where T: UIElement
+        public static void Listen<T>(Expression<Func<T, string>> property) where T : UIElement
         {
             EventManager.RegisterClassHandler(typeof(T), UIElement.PreviewMouseLeftButtonDownEvent, (RoutedEventHandler)(async (s, e) =>
             {
@@ -54,6 +54,10 @@ namespace VirtualKeyboard.Wpf
             _windowHost.DataContext = new VirtualKeyboardViewModel(initialValue);
             ((ContentControl)_windowHost.FindName(_keyboardValueName)).Content = new KeyboardValueView();
             ((ContentControl)_windowHost.FindName(_keyboardName)).Content = new VirtualKeyboardView();
+
+            // Ustawienie okna na "Topmost"
+            _windowHost.Topmost = true;
+
             void handler(object s, CancelEventArgs a)
             {
                 var result = GetResult();
@@ -67,6 +71,7 @@ namespace VirtualKeyboard.Wpf
 
             _windowHost.Owner = Application.Current.MainWindow;
             _windowHost.Show();
+
             return _tcs.Task;
         }
 

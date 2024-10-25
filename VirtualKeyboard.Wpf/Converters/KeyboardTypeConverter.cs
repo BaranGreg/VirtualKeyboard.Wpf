@@ -19,6 +19,7 @@ namespace VirtualKeyboard.Wpf.Converters
             {
                 case KeyboardType.Alphabet: return new AlphabetView();
                 case KeyboardType.Special: return new SpecialCharactersView();
+                case KeyboardType.Number: return new NumbersView();
             }
             return null;
         }
